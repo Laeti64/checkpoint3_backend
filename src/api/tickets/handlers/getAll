@@ -1,0 +1,6 @@
+import TicketsHandler from "../interface"
+
+
+const getAllTickets: TicketsHandler["getAll"] = async (req, res) {
+    const tickets = 
+}
