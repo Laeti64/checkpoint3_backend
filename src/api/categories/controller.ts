@@ -4,7 +4,7 @@ import create from "./handlers/create";
 import delete_ from "./handlers/delete";
 import update from "./handlers/update";
 
-const ticketsController = {
+const categoriesController = {
   getAll,
   getOne,
   delete_,
@@ -12,4 +12,4 @@ const ticketsController = {
   update,
 };
 
-export default ticketsController;
+export default categoriesController;
