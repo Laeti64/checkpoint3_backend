@@ -1,7 +1,7 @@
 import { Ticket } from "@prisma/client";
 import { RequestHandler } from "express";
 import { ResponseError, ResponseValidation } from "../../interfaces/interfaces";
-import { TTicketBody } from "../../types/types";
+import { TTicketBody } from "../../../types/types";
 
 export default interface TicketsHandler {
   getAll: RequestHandler<null, Ticket[] | ResponseError, null>;
