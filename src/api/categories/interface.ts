@@ -1,7 +1,7 @@
 import { Category } from "@prisma/client";
 import { RequestHandler } from "express";
 import { ResponseError, ResponseValidation } from "../../interfaces/interfaces";
-import { TCategoryBody } from "../../types/types";
+import { TCategoryBody } from "../../../types/types";
 
 export default interface CategoriesHandler {
   getAll: RequestHandler<null, Category[] | ResponseError, null>;

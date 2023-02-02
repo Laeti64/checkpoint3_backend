@@ -1,11 +1,14 @@
 import Express from "express";
+import api from "./api";
 
 const app = Express();
 
 app.use(Express.json());
 
-app.get("/", (req, res) => {
-  return res.status(200).json("Hello world");
-});
+import cors from "cors";
+import corsOptions from "./config/corsOptions";
+
+app.use(cors(corsOptions));
+app.use("/api/v1", api);
 
 export default app;

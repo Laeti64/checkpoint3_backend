@@ -1,6 +1,10 @@
 import { RequestHandler } from "express";
 import { ResponseError } from "../../interfaces/interfaces";
-import { TLoginBody, TUserBody, TUserWithoutPassword } from "../../types/types";
+import {
+  TLoginBody,
+  TUserBody,
+  TUserWithoutPassword,
+} from "../../../types/types";
 import { JwtPayload } from "jsonwebtoken";
 
 export interface AuthHandler {
