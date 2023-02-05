@@ -4,7 +4,7 @@ import prisma from "../../../../prisma/client";
 const createTicket: TicketsHandler["create"] = async (req, res) => {
   try {
     const {
-      categoryName,
+      categoryId,
       deadLine,
       description,
       linkedToProject,
@@ -19,7 +19,7 @@ const createTicket: TicketsHandler["create"] = async (req, res) => {
         deadLine,
         category: {
           connect: {
-            name: categoryName,
+            id: categoryId,
           },
         },
         user: {

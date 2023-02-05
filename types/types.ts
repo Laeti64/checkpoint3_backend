@@ -8,9 +8,9 @@ export type TTicketBody = {
   title: string;
   description: string;
   linkedToProject: string;
-  deadLine: Date;
+  deadLine: string;
   userName: string;
-  categoryName: string;
+  categoryId: string;
 };
 
 export type TUserWithoutPassword = Omit<User, "password">;
