@@ -8,7 +8,7 @@ import checkToken from "../middlewares/checkToken";
 const router = Router();
 router.use("/auth", auth);
 
-router.use(checkToken);
+// router.use(checkToken);
 router.use("/users", users);
 router.use("/categories", categories);
 router.use("/tickets", tickets);

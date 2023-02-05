@@ -26,12 +26,19 @@ enum Role {
   ADMIN
 }
 
+enum Status {
+  OPENED
+  CLOSED
+}
+
 model Ticket {
   id              String    @id @unique @default(uuid())
   title           String
   description     String
   linkedToProject String
-  deadLine        DateTime?
+  deadLine        String?
+  status          Status    @default(OPENED)
+  solution        String?
   user            User      @relation(fields: [userId], references: [id])
   userId          String
   category        Category  @relation(fields: [categoryId], references: [id])

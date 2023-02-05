@@ -5,7 +5,7 @@ const ticketToUpdate: TicketsHandler["update"] = async (req, res) => {
   try {
     const { id } = req.params;
     const {
-      categoryName,
+      categoryId,
       deadLine,
       description,
       linkedToProject,
@@ -16,7 +16,7 @@ const ticketToUpdate: TicketsHandler["update"] = async (req, res) => {
       where: { id },
       data: {
         title,
-        category: { connect: { name: categoryName } },
+        category: { connect: { id: categoryId } },
         deadLine,
         description,
         user: { connect: { username: userName } },
